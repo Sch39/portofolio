@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="witdh=device-width, initial-scale=1.0">
+    <title>PilmKu-rekomendasi film</title>
+</head>
+
+<body class="body__web">
+
+    <a href="#maincontent" class="skip-content">Menuju ke konten</a>
+
+
+    <header>
+        <img class="header__logo" src="../images/sch39.png" alt="logo website">
+        <h1>PilmKu</h1>
+        <a href="#" id="menu" class="header__menu" aria-label="navigation-menu">☰</a>
+    </header>
+
+
+    <nav id="drawer" class="nav">
+        <ul class="nav__list">
+            <li class="nav__item"><a href="index.html">Home</a></li>
+            <li class="nav__item"><a href="https://github.com/Sch39">About Me</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="hero">
+
+        <div id="filmCarousel" class="carousel slide" data-bs-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-bs-target="#filmCarousel" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#filmCarousel" data-bs-slide-to="1"></li>
+                <li data-bs-target="#filmCarousel" data-bs-slide-to="2"></li>
+                <li data-bs-target="#filmCarousel" data-bs-slide-to="3"></li>
+            </ol>
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <img src="../images/heros/Cinta-Dalam-Kardus.png" class="d-block w-100"
+                        alt="carousel film Cinta Dalam Kardus">
+                </div>
+                <div class="carousel-item">
+                    <img src="../images/heros/The-Doll-2016.png" class="d-block w-100"
+                        alt="carousel film The Doll 2016">
+                </div>
+                <div class="carousel-item">
+                    <img src="../images/heros/Si-Doel-The-Movie.png" class="d-block w-100"
+                        alt="carousel film Si Doel The-Movie">
+                </div>
+                <div class="carousel-item">
+                    <img src="../images/heros/We-Are-The-Largest-Cinema-Chain.png" class="d-block w-100"
+                        alt="carousel film We Are The Largest Cinema Chain">
+                </div>
+
+            </div>
+            <a class="carousel-control-prev" href="#filmCarousel" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#filmCarousel" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </a>
+        </div>
+
+    </div>
+
+    <main>
+        <div class="content" id="maincontent">
+
+            <h1>Trending Hari Ini</h1>
+
+            <div class="films">
+                <film-list></film-list>
+            </div>
+
+
+        </div>
+
+
+    </main>
+
+
+
+    <footer>
+        <div class="copyright">
+            <p>Copyright &copy;2020 - PilmKu</p>
+        </div>
+        <div class="api-tmdb">
+            <p>API by:</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Tmdb-312x276-logo.png" alt="api by imdb">
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>

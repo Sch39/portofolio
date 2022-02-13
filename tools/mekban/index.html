@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+  <style>
+    #container {
+      position: absolute;
+      border: 2px solid black;
+      width: 500px;
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    #myCanvas {
+      position: relative;
+      margin-top: 10px;
+      border: 1px solid black;
+      width: 480px;
+      height: 280px;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    #controllers {
+      margin: 10px;
+      padding: 10px;
+      /* height: 400px; */
+      border: 1px solid black;
+    }
+
+    .controll {
+      width: 100%;
+      height: 100px;
+      border: 1px solid black;
+      overflow: scroll;
+    }
+
+    table>th,
+    td {
+      border: 1px solid black;
+    }
+
+    th,
+    td {
+      padding: 5px;
+      background-color: none;
+    }
+
+    .buttonAdd {
+      width: 70%;
+      /* margin: 15px; */
+    }
+  </style>
+
+
+
+  <title>Perhitungan </title>
+</head>
+
+<body>
+  <div id="container">
+    <canvas id="myCanvas"></canvas>
+    <div id="controllers">
+      <h3>Pengaturan</h3>
+      <p>Support dan Engsel</p>
+      <div id="support" class="controll">
+        <table id="inputSupport">
+          <tr>
+            <th>x[m]</th>
+            <th>Fz</th>
+            <th>M</th>
+            <th>Engsel</th>
+            <th>Delete</th>
+          </tr>
+
+        </table>
+      </div>
+
+      <p>Beban Terpusat</p>
+      <div id="pointLoads" class="controll">
+        <table id="inputPointLoads">
+          <tr>
+            <th>x[m]</th>
+            <th>Fz[KN]</th>
+            <th>M[kNm]</th>
+            <th></th>
+            <th>Delete</th>
+          </tr>
+
+
+        </table>
+      </div>
+
+      <p>Beban Terdistribusi</p>
+      <div id="distributedLoads" class="controll">
+        <table>
+          <tr>
+            <th>x1[m]</th>
+            <th>x2[m]</th>
+            <th>q1[KN/m]</th>
+            <th>q2[kN/m]</th>
+            <th>Delete</th>
+          </tr>
+          <tr>
+            <td><input type="number" name="" id="" disabled></td>
+            <td><input type="number" name="" id="" disabled></td>
+            <td><input type="number" name="" id="" disabled></td>
+            <td><input type="number" name="" id="" disabled></td>
+            <td><button>delete</button></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <!-- script  -->
+  <script>
+    const inputSupport = document.getElementById('inputSupport')
+    const inputPointLoads = document.getElementById('inputPointLoads')
+    const support = document.getElementById('support')
+    const pointLoads = document.getElementById('pointLoads')
+
+
+    let templateInputSupport = () => {
+      let tr = document.createElement('tr')
+      tr.innerHTML = `
+            <td class= "fieldSupport"><input type="number" name="" min="0" class="supportX"></td>
+            <td class= "fieldSupport"><input type="checkbox" name="" class="supportZ"></td>
+            <td class= "fieldSupport"><input type="checkbox" name="" id="" disabled></td>
+            <td class= "fieldSupport"><input type="checkbox" name="" id="" disabled></td>
+            <td><button>delete</button></td>
+          `
+      return tr
+
+    }
+
+    let templateInputPointLoad = () => {
+      let tr = document.createElement('tr')
+      tr.innerHTML = `
+            <td class= "fieldPointLoad"><input type="number" name="" class="loadX" min="0"></td>
+            <td class= "fieldPointLoad"><input type="number" name="" class="loadZ"></td>
+            <td class= "fieldPointLoad"><input type="number" name="" id="" disabled></td>
+            <td></td>
+            <td><button>delete</button></td>
+          `
+      return tr
+    }
+    let templateAddButton = (id) => {
+      let button = document.createElement('button')
+      button.setAttribute('id', id)
+      button.setAttribute('class', 'buttonAdd')
+      button.textContent = "ADD"
+      return button
+    }
+
+    inputSupport.appendChild(templateInputSupport())
+    inputPointLoads.appendChild(templateInputPointLoad())
+    support.appendChild(templateAddButton('buttonAddSupportField'))
+    pointLoads.appendChild(templateAddButton('buttonAddPointLoadField'))
+
+    const buttonAddSupportField = document.getElementById('buttonAddSupportField')
+    const buttonAddPointLoadField = document.getElementById('buttonAddPointLoadField')
+
+    buttonAddSupportField.addEventListener('click', () => {
+      inputSupport.appendChild(templateInputSupport())
+
+    })
+
+    buttonAddPointLoadField.addEventListener('click', () => {
+      inputPointLoads.appendChild(templateInputPointLoad())
+
+    })
+
+
+
+  </script>
+</body>
+
+</html>

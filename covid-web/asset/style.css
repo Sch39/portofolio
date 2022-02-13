@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Lato:wght@700;900&display=swap');
+
+/* Css Reset from mayerweb */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* end css reset */
+
+
+
+
+
+
+body{
+  font-family: sans-serif;
+  background-color: #363333;
+  box-sizing: border-box;
+}
+
+main{
+  color: white;
+  box-sizing: border-box;
+}
+
+header{
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  max-height: 1000px;
+
+}
+
+.jumbotron img{  
+  width: 65%;
+  min-width: 641px;
+}
+
+.jumbotron{
+  float: left;
+}
+
+.pembuka{
+  width: 35%;
+  float: left;
+  margin-left: 30px;
+  font-size: 37.5px;
+  box-sizing: border-box;
+
+}
+
+
+
+.jumbotron h1{
+  position: absolute;
+  font-size: 37.5px;
+  color: white;
+  padding-left: 10px;
+  padding-top: 5px;
+}
+
+.data-covid{
+  color: white;
+  padding: 20px;
+}
+.data-covid h2{
+  text-align: center;
+  font-size: 37.5px;
+}
+.data-covid ul{
+  padding-top: 20px;
+  line-height: 50px;
+
+}
+
+
+header nav{
+  margin-top: 10px;
+  min-height: 370px;
+  padding: 20px;
+}
+
+nav ul li a{
+  text-decoration: none;
+  color: white;
+  position: relative;
+  margin: auto;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+
+
+.flex-container-column1{
+  display: flex;
+  flex-direction: column;
+  min-width: 48%;
+  height: 370px;
+  float: left;
+}
+.flex-container-column2{
+  display: flex;
+  flex-direction: column;
+  max-width: 48%;
+  height: 370px;
+  float: right;
+}
+
+.flex-row{
+  display: flex;
+  height: 48%;
+  border: 2px white solid;
+  border-radius: 20px;
+}
+
+.flex-container-column2 .flex-row{
+  height: 100%;
+}
+
+
+.nav-1{
+  margin-bottom: 3px;
+  box-sizing: border-box;
+  background-image: url(img/covid-19.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.nav-1 a:hover{
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.nav-2 a:hover{
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.3);
+
+}
+.nav-3 a:hover{
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.3);
+
+}
+
+
+.nav-2{
+  background-image: url(img/batuk.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  box-sizing: border-box;
+
+}
+
+
+.nav-3{
+  background-image: url(img/bermasker.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 30%;
+  background-size: 130%;
+  box-sizing: border-box;
+
+
+}
+.nav-3 a{
+  text-align: center;
+  font-size: 28.125px;
+}
+
+
+
+
+.content{
+  width: 80%;
+  min-width: 300px;
+  min-height: 3000px;
+  padding-left: 40px;
+  float: left;
+  box-sizing: border-box;
+
+}
+
+#pengertian, #gejala, #pencegahan{
+  width: 100%;
+  height: 1000px;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+#gejala, #pencegahan{
+  background-position-y: bottom;
+  background-position-x: right;
+  background-repeat: no-repeat;
+}
+
+#gejala{
+  background-image: url(img/batuk-1.png);
+  background-size: 80%;
+  border-radius: 50%;
+
+}
+#pencegahan{
+  background-image: url(img/bermasker-1.png);
+  background-size: 100%;
+
+}
+
+aside{
+  width: 20%;
+  font-size: 15.75px;
+  float: right;
+  box-sizing: border-box;
+  padding-top: 50px;
+  line-height: 30px;
+  min-height: 500px;
+  position: sticky;
+  top: 0;
+}
+
+
+
+.profile ul{
+  padding-left: 5px;
+  margin-top: 20px;
+
+}
+.profile img{
+  width: 100px;
+  opacity: 0.25;
+  border: 3px rgba(255, 255, 255, 0.6) solid;
+  border-radius: 50%;
+}
+.profile figure{
+  text-align: center;
+}
+
+.profile:hover ul{
+display: inline-block;
+}
+
+.profile:hover img{
+  opacity: 0.8;
+}
+.profile:hover{
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: rgba(255, 255, 255, 1);
+}
+
+.profile ul{
+  display: none;
+}
+
+
+
+.content h2{
+  font-size: 37.5px;
+  text-align: center;
+  margin-top: 60px;
+  padding-bottom: 40px;
+}
+
+.content ol, .content p{
+  font-size: 28.125px;
+  line-height: 1.3em;
+}
+
+#gejala li, #pencegahan li{
+  list-style-type: disc;
+  margin-left: 30px
+}
+
+#pencegahan ol{
+  padding-top: 1.5em;
+}
+
+
+main{
+  min-height: 3400px;
+  background-image: url(img/covid-19-1.png);
+  background-repeat: repeat-y;
+}
+
+
+footer{
+  padding: 30px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 28.125px;
+  background-color: #beb2ce3d;
+}
+
+
+@media screen and (max-width: 1061px){
+
+  header{
+    max-height: none;
+  }
+
+  .profile ul{
+    padding-left: 40px;
+  }
+
+  .jumbotron img{
+    width: 100%;
+    min-width: 100px;
+    object-fit: cover;
+    object-position: center;
+
+  }
+  .jumbotron{
+    float: none;
+
+  }
+  .pembuka{
+    float: none;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    min-width: 100px;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .data-covid{
+    margin-bottom: 50px;
+    
+  }
+
+  .nav-3{
+    background-size: 100%;
+  }
+
+  aside{
+    float: none;
+    width: 80%;
+    position: static;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+  }
+  .content{
+    float: none;
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 1024px){
+  .profile img{
+    opacity: 1;
+  }
+  .profile ul{
+    display: inline-block;
+    padding-left: 20px;
+
+  }
+  aside{
+    max-width: 400px;
+  }
+
+  footer{
+    font-size: 15.75px;
+    padding: 20px;
+  }
+}
+
+
+
+
+
+
+/* Micro Clear Fix code */
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+.cf {
+    *zoom: 1;
+}
